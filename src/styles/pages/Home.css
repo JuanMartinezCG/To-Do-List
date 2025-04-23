@@ -23,6 +23,7 @@ body {
   box-shadow: 0 px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar el contenedor */
   border-radius: 10px; /* Bordes redondeados */
   overflow: hidden; /* Oculta cualquier contenido que se desborde */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
 /* Ajusta el texto dentro del contenedor */
@@ -250,15 +251,17 @@ body {
 .home.dark-mode {
   background-color: #121212; /* Color más oscuro */
   color: #f5f5f5;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
 .home.dark-mode .titulo,
 .home.dark-mode .titulo-filtro {
-  color: #f5f5f5;
+  color: #f5f5f5; /* Color claro para el título */
+  border-color: #f5f5f5; /* Borde claro para el título */
 }
 
 #home-page.dark-mode {
-  background-color: #121212; /* Color de fondo oscuro */
+  background-color: #262525; /* Color de fondo oscuro */
   color: #f5f5f5;
 }
 
