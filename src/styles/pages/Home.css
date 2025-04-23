@@ -1,0 +1,219 @@
+/* Asegúrate de que el body esté centrado */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0; /* Fondo general */
+  font-family: Arial, sans-serif; /* Fuente general */
+}
+
+/* Asegúrate de que el texto no se salga del contenedor */
+#home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  max-width: 800px; /* Ancho máximo */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar el contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+/* Ajusta el texto dentro del contenedor */
+.titulo, .task-text {
+  max-width: 100%; /* Asegura que el texto no exceda el ancho del contenedor */
+  overflow-wrap: break-word; /* Permite que las palabras largas se dividan */
+  word-wrap: break-word; /* Compatibilidad con navegadores antiguos */
+  text-align: center; /* Centra el texto */
+}
+
+/* Título principal */
+.titulo {
+  font-size: 2.5rem;
+  color: #213547;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Formulario para agregar tareas */
+.add-task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+
+/* Botón de agregar tarea */
+.button-add-task {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #646cff; /* Color azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-add-task:hover {
+  background-color: #535bf2; /* Azul más oscuro */
+}
+
+/* Título del filtro */
+.titulo-filtro {
+  font-size: 1.5rem; /* Tamaño más grande */
+  font-weight: bold; /* Negrita */
+  color: #213547; /* Color oscuro */
+  margin-bottom: 10px; /* Espaciado inferior */
+  text-align: center; /* Centrado */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+/* Contenedor de los botones de filtro */
+.filter-buttons {
+  display: flex;
+  gap: 10px; /* Espaciado entre botones */
+  justify-content: center; /* Centra los botones */
+}
+
+/* Filtro de tareas */
+.filtro-tareas {
+  margin-bottom: 20px;
+}
+
+.titulo-filtro {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Botones de filtro y ordenamiento con el mismo color que agregar */
+.filter-button, .order-button {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  margin-right: 5px;
+  background-color: #646cff; /* Color azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-button:hover, .order-button:hover {
+  background-color: #535bf2; /* Azul más oscuro */
+}
+
+/* Ordenamiento de tareas */
+.order-tasks {
+  margin-bottom: 20px;
+}
+
+/* Lista de tareas */
+.task-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Estilo para cada tarea */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc; /* Borde para diferenciar tareas */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para un mejor aspecto */
+  transition: background-color 0.3s ease; /* Transición suave para cambios de color */
+}
+
+/* Tareas completadas */
+.task-item.completed {
+  text-decoration: line-through; /* Tacha el texto */
+  color: #888; /* Cambia el color del texto */
+  background-color: #f0f0f0; /* Fondo más claro para tareas completadas */
+}
+
+/* Texto dentro de cada tarea */
+.task-text {
+  flex: 1; /* Ocupa el espacio restante */
+  cursor: pointer;
+  color: black; /* Texto en negro */
+  padding-right: 10px; /* Espaciado entre texto y botones */
+  overflow-wrap: break-word; /* Permite que las palabras largas se dividan */
+  word-wrap: break-word; /* Compatibilidad con navegadores antiguos */
+  white-space: pre-wrap; /* Permite saltos de línea y ajuste del texto */
+  min-width: 0; /* Evita que el texto fuerce el ancho del contenedor */
+}
+
+/* Botones de editar y eliminar */
+.edit-task-button, .delete-task-button {
+  background-color: #646cff; /* Color azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-task-button:hover, .delete-task-button:hover {
+  background-color: #535bf2; /* Azul más oscuro */
+}
+
+/* Checkbox estilizado */
+.task-checkbox {
+  appearance: none; /* Elimina el estilo predeterminado */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #646cff; /* Borde azul */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-checkbox:checked {
+  background-color: #646cff; /* Fondo azul cuando está seleccionado */
+  border-color: #535bf2; /* Borde más oscuro */
+}
+
+.task-checkbox:checked::after {
+  content: '✔'; /* Marca de verificación */
+  color: white;
+  font-size: 14px;
+}
+
+/* Contenedor de los botones */
+.task-buttons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0; /* Evita que los botones se reduzcan si el texto es largo */
+}
+
+.edit-task-input {
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.delete-task-button:hover {
+    background-color: #ff0000; /* Rojo intenso */
+  }
+

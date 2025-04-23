@@ -13,12 +13,14 @@ const AddTaskForm = ({ onAddTask }) => {
       };
       
     return (
-        <form className="add-task-form" onSubmit={handleSubmit}>
+        <form id="add-task-form" className="add-task-form" onSubmit={handleSubmit}>
         <input type="text" 
+        id="task-input"
+        className="task-input"
         placeholder="Escribe una Nueva Tarea"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)} />
-        <button type="submit">Agregar</button>
+        <button id="add-task-button" className="button-add-task" class="btn-9" type="submit">Agregar</button>
         </form>
     );
 }

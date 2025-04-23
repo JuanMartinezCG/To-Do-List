@@ -1,35 +1,53 @@
 import React, { useState } from 'react';
 
-const TaskItem = ({ task, onToggleComplete, onDeleteTask, onToggleEditTask, onEditTask }) => {
-  const [editingText, setEditingText] = useState(task.text);
+const TaskItem = ({  task,
+  onDeleteTask,
+  onToggleComplete,
+  onToggleEditTask,
+  onEditTask
+}) => {
+  const [editingText, setEditingText] = useState(task.text); // ← aquí inicializamos el texto editable
 
   const handleEdit = () => {
     if (editingText.trim() !== '') {
-      onEditTask(task.id, editingText);
+      onEditTask(task.id, editingText); // ← enviamos el nuevo texto
     }
   };
 
   return (
-    <li className={task.completed ? 'completed' : ''}>
+    <li key={task.id} className={`task-item ${task.completed ? 'completed' : ''}`}>
       {task.editing ? (
+        // Si la tarea está en modo edición, mostramos un input
         <input
           type="text"
-          value={editingText}
-          onChange={(e) => setEditingText(e.target.value)}
+          id={`edit-task-${task.id}`}
+          className="edit-task-input"
+          value={editingText} // Mostramos el texto que estamos editando
+          onChange={(e) => setEditingText(e.target.value)} // Actualizamos el texto mientras escribe
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
-              handleEdit();
+              handleEdit(); // Al presionar Enter, guarda la edición
             }
           }}
-          onBlur={handleEdit}
+          onBlur={handleEdit} // También guarda la edición si pierde el foco
         />
       ) : (
+        // Si no está en modo edición, mostramos el texto normal de la tarea
         <>
-          <span onClick={() => onToggleComplete(task.id)}>
+          <span className="task-text" onClick={() => onToggleComplete(task.id)}>
             {task.text}
           </span>
-          <button onClick={() => onToggleEditTask(task.id)}>✏️ Editar</button>
-          <button onClick={() => onDeleteTask(task.id)}>❌ Eliminar </button>
+          <div className="task-buttons">
+            <input
+              type="checkbox"
+              className="task-checkbox"
+              // Cambia el estado de la tarea al hacer clic en el checkbox
+              checked={task.completed}
+              onChange={() => onToggleComplete(task.id)}
+            />
+            <button className="edit-task-button" onClick={() => onToggleEditTask(task.id)}>✏️</button>
+            <button className="delete-task-button" onClick={() => onDeleteTask(task.id)}>❌</button>
+          </div>
         </>
       )}
     </li>

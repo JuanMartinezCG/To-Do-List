@@ -4,6 +4,8 @@ import AddTaskForm from '../components/AddTaskForm';
 import FilterTasks from '../components/FilterTasks'; // Importa el componente de filtro de tareas
 import OrdenTask from '../components/OrdenTask'; // Importa el componente de ordenamiento de tareas
 import useLocalStorage from '../hooks/useLocalStorage'; // Importa el hook personalizado para manejar el localStorage
+
+import '../styles/pages/Home.css'; // Importa los estilos CSS para la página de inicio
 // Importa los componentes necesarios para la página de inicio
 
 const Home = () => { // Componente principal de la página de inicio|
@@ -80,8 +82,8 @@ const tareasFinales = [...tareasFiltradas].sort((a, b) => {
   }, [tareas]);
 
   return (
-    <div className="home">
-      <h1>To Do List</h1>
+    <div id="home-page" className="home">
+      <h1 className='titulo'>LISTA DE TAREAS</h1>
       <AddTaskForm onAddTask={AddTask} />{/* Renderizamos el formulario y le pasamos la función para agregar tareas */}
       
       <FilterTasks setFiltro={setFiltro} /> {/* Renderizamos el filtro de tareas */}
