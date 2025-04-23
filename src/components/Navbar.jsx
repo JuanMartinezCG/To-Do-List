@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "../styles/components/Navbar.css";
 
 function Navbar() {
   return (
-    <nav style={{ display: 'flex', gap: '1rem', padding: '1rem' }}>
+    <nav className="navbar">
       <Link to="/">Home</Link>
       <Link to="/login">Login</Link>
       <Link to="/register">Registro</Link>

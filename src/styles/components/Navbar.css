@@ -1,0 +1,32 @@
+/* Navbar.css */
+.navbar {
+    background-color: #0527b0;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+.navbar a {
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    padding: 5px 10px; /* Espaciado interno */
+    border: 2px solid white; /* Borde alrededor */
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+}
+
+.navbar .menu {
+    display: flex;
+}

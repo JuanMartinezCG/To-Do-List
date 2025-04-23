@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f0f0f0; /* Fondo general */
+  background-color: #646cff; /* Fondo general */
   font-family: Arial, sans-serif; /* Fuente general */
 }
 
@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
   max-width: 800px; /* Ancho máximo */
   width: 100%; /* Asegura que ocupe todo el ancho disponible */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar el contenedor */
+  box-shadow: 0 px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar el contenedor */
   border-radius: 10px; /* Bordes redondeados */
   overflow: hidden; /* Oculta cualquier contenido que se desborde */
 }
@@ -145,8 +145,8 @@ body {
 /* Tareas completadas */
 .task-item.completed {
   text-decoration: line-through; /* Tacha el texto */
-  color: #888; /* Cambia el color del texto */
-  background-color: #f0f0f0; /* Fondo más claro para tareas completadas */
+  color: #5c5c5c; /* Cambia el color del texto */
+  background-color: #cdcdcd; /* Fondo más claro para tareas completadas */
 }
 
 /* Texto dentro de cada tarea */
