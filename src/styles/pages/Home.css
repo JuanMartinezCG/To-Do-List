@@ -246,3 +246,20 @@ body {
     background-color: #ff0000; /* Rojo intenso */
   }
 
+/* Modo oscuro */
+.home.dark-mode {
+  background-color: #121212; /* Color más oscuro */
+  color: #f5f5f5;
+}
+
+.home.dark-mode .titulo,
+.home.dark-mode .titulo-filtro {
+  color: #f5f5f5;
+}
+
+#home-page.dark-mode {
+  background-color: #121212; /* Color de fondo oscuro */
+  color: #f5f5f5;
+}
+
+

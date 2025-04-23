@@ -75,6 +75,11 @@ const tareasFinales = [...tareasFiltradas].sort((a, b) => {
   return 0; //sin orden
 });
 
+const [modoOscuro, setModoOscuro] = useState(false);
+
+const toggleModoOscuro = () => {
+  setModoOscuro(!modoOscuro);
+};
   
   useEffect(() => { // Guarda las tareas en el localStorage cada vez que cambian
     console.log("Guardando tareas en localStorage:", tareas);
@@ -82,7 +87,11 @@ const tareasFinales = [...tareasFiltradas].sort((a, b) => {
   }, [tareas]);
 
   return (
-    <div id="home-page" className="home">
+    <div id="home-page" className={`home ${modoOscuro ? 'dark-mode' : ''}`}>
+      <button onClick={toggleModoOscuro}>
+        {modoOscuro ? '☀️ Modo Claro' : '🌙 Modo Oscuro'}
+      </button>
+
       <h1 className='titulo'>LISTA DE TAREAS</h1>
       <AddTaskForm onAddTask={AddTask} />{/* Renderizamos el formulario y le pasamos la función para agregar tareas */}
       
