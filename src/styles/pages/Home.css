@@ -33,27 +33,56 @@ body {
   text-align: center; /* Centra el texto */
 }
 
+/* Animación para el borde del título con más colores y más lenta */
+@keyframes borderAnimation {
+    0% {
+      border-color: #ff0000; /* Rojo */
+    }
+    16% {
+      border-color: #ff7f00; /* Naranja */
+    }
+    33% {
+      border-color: #ffff00; /* Amarillo */
+    }
+    50% {
+      border-color: #00ff00; /* Verde */
+    }
+    66% {
+      border-color: #0000ff; /* Azul */
+    }
+    83% {
+      border-color: #4b0082; /* Índigo */
+    }
+    100% {
+      border-color: #9400d3; /* Violeta */
+    }
+  }
+
 /* Título principal */
 .titulo {
-  font-size: 2.5rem;
-  color: #213547;
-  margin-bottom: 20px;
-  text-align: center;
-}
+    font-size: 2.5rem;
+    color: #213547;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 4px solid #ff0000; /* Borde inicial */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    animation: borderAnimation 6s infinite; /* Animación más lenta */
+  }
 
 /* Formulario para agregar tareas */
 .add-task-form {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .task-input {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
 }
 
 /* Botón de agregar tarea */

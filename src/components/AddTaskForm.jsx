@@ -20,7 +20,7 @@ const AddTaskForm = ({ onAddTask }) => {
         placeholder="Escribe una Nueva Tarea"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)} />
-        <button id="add-task-button" className="button-add-task" class="btn-9" type="submit">Agregar</button>
+        <button id="add-task-button" className="button-add-task" type="submit">Agregar</button>
         </form>
     );
 }
